@@ -35,7 +35,7 @@
         <div>
             <div class="text-center">
                 <h1 style="font-family: quicksand">Royal Street Shoes</h1>
-                <img src="image/loop.png" alt="Logo" width="60">
+                <img src="image/loop.png" alt="Logo" width="100">
             </div>
         </div>
     </body>
