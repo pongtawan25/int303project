@@ -30,9 +30,10 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
+        String id = request.getParameter("id");
         String password = request.getParameter("password");
-        if(username != null && username.trim().length() > 0 && password != null && password.trim().length() > 0){
+        if(id != null && id.trim().length() > 0 && password != null && password.trim().length() > 0){
+            
         }
     }
 
