@@ -43,7 +43,7 @@ public class IndexServlet extends HttpServlet {
             throws ServletException, IOException {
         ProductJpaController pdCtrl = new ProductJpaController(utx, emf);
         List<Product> pd = pdCtrl.findProductEntities();
-        request.setAttribute("pd", pd);
+        request.setAttribute("pd",pd);
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
 

@@ -4,6 +4,7 @@
     Author     : Tan
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -72,7 +73,7 @@
                                     <li><a href="Converse">Converse</a></li>
                                     <li><a href="Vans">Vans</a></li>
                                     <li><a href="Help">Help</a></li>
-                                    <li><a href="Help">Contact</a></li>
+                                    <li><a href="Contact">Contact</a></li>
                                     <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
                                     <li class="cart"><a href="Login1">Login</a></li>
                                 </ul>
@@ -126,7 +127,7 @@
                     <div class="row">
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/b1.jpg);"></a>
+                                <a href="#" class="featured-img" style="background-image: url(images/c1.jpg);"></a>
                                 <div class="desc">
                                     <h2><a href="#">Adidas Collection</a></h2>
                                 </div>
@@ -134,7 +135,7 @@
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/b2.jpg);"></a>
+                                <a href="#" class="featured-img" style="background-image: url(images/c2.jpg);"></a>
                                 <div class="desc">
                                     <h2><a href="#">Vans Collection</a></h2>
                                 </div>
@@ -142,7 +143,7 @@
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/b3.jpg);"></a>
+                                <a href="#" class="featured-img" style="background-image: url(images/c3.jpg);"></a>
                                 <div class="desc">
                                     <h2><a href="#">Nike Collection</a></h2>
                                 </div>
@@ -150,7 +151,7 @@
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/b4.jpg);"></a>
+                                <a href="#" class="featured-img" style="background-image: url(images/c4.jpg);"></a>
                                 <div class="desc">
                                     <h2><a href="#">Converse Collection</a></h2>
                                 </div>
@@ -168,17 +169,19 @@
                         </div>
                     </div>
                     <div class="row row-pb-md">
-                        <div class="col-md-3 col-lg-3 mb-4 text-center">
-                            <div class="product-entry border">
-                                <a href="#" class="prod-img">
-                                    <img src="images/GG01.jpg" class="img-fluid">
-                                </a>
-                                <div class="desc">
-                                    <h2><a href="#">Women's Boots Shoes Maca</a></h2>
-                                    <span class="price">$139.00</span>
+                        <c:forEach items="${pd}">
+                            <div class="col-md-3 col-lg-3 mb-4 text-center">
+                                <div class="product-entry border">
+                                    <a href="#" class="prod-img">
+                                        <img src="images/${productid}" class="img-fluid">
+                                    </a>
+                                    <div class="desc">
+                                        <h2><a href="#">${productname}</a></h2>
+                                        <span class="price">${productprice} Baht</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>

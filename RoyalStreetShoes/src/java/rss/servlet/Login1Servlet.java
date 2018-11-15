@@ -7,16 +7,27 @@ package rss.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.annotation.Resource;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.transaction.UserTransaction;
+import rss.jpa.model.Customer;
+import rss.jpa.model.controller.CustomerJpaController;
 
 /**
  *
  * @author Tan
  */
 public class Login1Servlet extends HttpServlet {
+
+    @Resource
+    UserTransaction utx;
+    @PersistenceUnit(unitName = "RoyalStreetShoesPU")
+    EntityManagerFactory emf;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,7 +40,19 @@ public class Login1Servlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        if (username != null && username.trim().length() > 0 && password != null && password.trim().length() > 0) {
+            CustomerJpaController cusCtrl = new CustomerJpaController(utx, emf);
+            Customer cus = cusCtrl.findCustomer(username);
+            if (cus != null) {
+                request.getSession().setAttribute("cus", cus);
+                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+                return;
+            }
+        }
+        getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
