@@ -51,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
         String creditcard = request.getParameter("creditcard");
-        if (true) {
+        if (false) {
             CustomerJpaController cusCtrl = new CustomerJpaController(utx, emf);
             Customer cus = new Customer(username, password, fname, lname, address, email, Integer.valueOf(phone), Integer.valueOf(creditcard));
             request.setAttribute("cus", cus);

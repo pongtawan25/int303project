@@ -154,7 +154,6 @@
                                     <div class="w-100"></div>
                                     <div class="offset-5">
                                         <div class="form-group">
-
                                             <input type="submit" value="Login" class="btn btn-primary">
                                         </div>
                                     </div>
