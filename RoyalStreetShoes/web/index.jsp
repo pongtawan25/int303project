@@ -51,7 +51,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-7 col-md-9">
-                                <div id="colorlib-logo"><a href="index.html">Royal Street Shoes</a></div>
+                                <div id="colorlib-logo"><a href="index.jsp"><img src="images/logo.png" width="100"> Royal Street Shoes</a></div>
                             </div>
                             <div class="col-sm-5 col-md-3">
                                 <form action="#" class="search-wrap">
@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-sm-12 text-left menu-1">
                                 <ul>
-                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li class="active"><a href="index.jsp">Home</a></li>
                                     <li><a href="Adidas">Adidas</a></li>
                                     <li><a href="Nike">Nike</a></li>
                                     <li><a href="Converse">Converse</a></li>
@@ -73,7 +73,7 @@
                                     <li><a href="Help">Help</a></li>
                                     <li><a href="Help">Contact</a></li>
                                     <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
-                                    <li class="cart"><a href="cart.html">Login</a></li>
+                                    <li class="cart"><a href="Login1">Login</a></li>
                                 </ul>
                             </div>
                         </div>
