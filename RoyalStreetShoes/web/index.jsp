@@ -171,7 +171,7 @@
                         <div class="col-md-3 col-lg-3 mb-4 text-center">
                             <div class="product-entry border">
                                 <a href="#" class="prod-img">
-                                    <img src="images/a1.jpg" class="img-fluid">
+                                    <img src="images/GG01.jpg" class="img-fluid">
                                 </a>
                                 <div class="desc">
                                     <h2><a href="#">Women's Boots Shoes Maca</a></h2>
