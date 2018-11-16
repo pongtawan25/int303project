@@ -75,7 +75,7 @@
                                     <li><a href="Help">Help</a></li>
                                     <li><a href="Contact">Contact</a></li>
                                     <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
-                                    <li class="cart"><a href="Login1">Login</a></li>
+                                    <li class="cart"><a href="Login.jsp">Login</a></li>
                                 </ul>
                             </div>
                         </div>
