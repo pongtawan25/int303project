@@ -46,12 +46,14 @@ public class Login1Servlet extends HttpServlet {
             CustomerJpaController cusCtrl = new CustomerJpaController(utx, emf);
             Customer cus = cusCtrl.findCustomer(username);
             if (cus != null) {
-                request.getSession().setAttribute("cus", cus);
-                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-                return;
+                if (password.equals(cus.getCustomerpassword())) {
+                    request.getSession().setAttribute("cus", cus);
+                    getServletContext().getRequestDispatcher("/Index").forward(request, response);
+                    return;
+                }
             }
         }
-        getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
 
     }
 

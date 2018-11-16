@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Royal Street Shoes</title>
+        <title> Royal Street Shoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -75,7 +75,9 @@
                                     <li><a href="Help">Help</a></li>
                                     <li><a href="Contact">Contact</a></li>
                                     <li class="cart"><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li>
-                                    <li class="cart"><a href="Login.jsp">Login</a></li>
+                                    <li class="cart"><a href="Logout">Logout</a></li>
+                                    <li class="cart"><a href="Login1">Login</a></li>
+                                    <li class="cart"><span>${cus.customerfname}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -169,15 +171,15 @@
                         </div>
                     </div>
                     <div class="row row-pb-md">
-                        <c:forEach items="${pd}" var="p">
+                        <c:forEach items="${best}" var="b">
                             <div class="col-md-3 col-lg-3 mb-4 text-center">
                                 <div class="product-entry border">
                                     <a href="#" class="prod-img">
-                                        <img src="images/${p.productid}.jpg" class="img-fluid">
+                                        <img src="images/${b.bestsellid}.jpg" class="img-fluid">
                                     </a>
                                     <div class="desc">
-                                        <h2><a href="#">${p.productname}</a></h2>
-                                        <span class="price">${p.productprice} Baht</span>
+                                        <h2><a href="#">${b.bestname}</a></h2>
+                                        <span class="price">${b.bestprice} Baht</span>
                                     </div>
                                 </div>
                             </div>
@@ -195,19 +197,19 @@
                     </div>
                     <div class="row">
                         <div class="col partner-col text-center">
-                            <img src="images/brand-1.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                            <img src="images/brand-1.jpg" class="img-fluid">
                         </div>
                         <div class="col partner-col text-center">
-                            <img src="images/brand-2.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                            <img src="images/brand-2.jpg" class="img-fluid">
                         </div>
                         <div class="col partner-col text-center">
-                            <img src="images/brand-3.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                            <img src="images/brand-3.jpg" class="img-fluid">
                         </div>
                         <div class="col partner-col text-center">
-                            <img src="images/brand-4.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                            <img src="images/brand-4.jpg" class="img-fluid">
                         </div>
                         <div class="col partner-col text-center">
-                            <img src="images/brand-5.jpg" class="img-fluid" alt="Free html4 bootstrap 4 template">
+                            <img src="images/brand-5.jpg" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -279,10 +281,7 @@
                     <div class="row">
                         <div class="col-sm-12 text-center">
                             <p>
-                                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
-                                <span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
+                                <span>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This web site is made by royal street shoes</span>
                             </p>
                         </div>
                     </div>
