@@ -36,8 +36,8 @@
                         <li><a href="Contact">Contact</a></li>
                         <li class="cart"><a href="#"><i class="icon-shopping-cart"></i> Cart[${cart.totalQuantity}]</a></li>
                             <c:choose>
-                                <c:when test="${sessionScope.user!=null}">
-                                <li class="cart">${sessionScope.customer.customerfname}
+                                <c:when test="${sessionScope.cus!=null}">
+                                <li class="cart"><img src="images/iconuser.png" width="30"> ${sessionScope.cus.customerfname}
                                     <a href="Logout">Logout</a></li>
                                 </c:when>
                                 <c:otherwise>
