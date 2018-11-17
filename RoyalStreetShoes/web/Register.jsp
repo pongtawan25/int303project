@@ -83,7 +83,7 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="email">Username</label>
+                                                <label>Username</label>
                                                 <input type="text" name="username" class="form-control" placeholder="Your username">
                                             </div>
                                         </div>
@@ -91,7 +91,7 @@
 
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="email">Password</label>
+                                                <label>Password</label>
                                                 <input type="text" name="password" class="form-control" placeholder="Your password">
                                             </div>
                                         </div>
@@ -119,71 +119,71 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="email">Email</label>
-                                                <input type="text" id="email" class="form-control" placeholder="Your email address">
+                                                <input type="text" id="email" class="form-control" placeholder="Your email">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="email">Phone</label>
+                                                <label>Phone</label>
                                                 <input type="text" name="phone" class="form-control" placeholder="Your phone number">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="email">Credit card No</label>
+                                                <label>Credit card No</label>
                                                 <input type="text" name="creditcard" class="form-control" placeholder="Your credit card no">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
-
+                                        <span>${mes}</span>
                                         <div class="offset-5">
                                             <div class="form-group">
                                                 <input type="submit" value="Confirm" class="btn btn-primary">
                                             </div>
                                         </div>
+                                    </div>
                                 </form>		
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <jsp:include page="include/Footer.jsp"/>
         </div>
 
-        <jsp:include page="include/Footer.jsp"/>
-    </div>
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
+        </div>
 
-    <div class="gototop js-top">
-        <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
-    </div>
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- popper -->
+        <script src="js/popper.min.js"></script>
+        <!-- bootstrap 4.1 -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- jQuery easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Flexslider -->
+        <script src="js/jquery.flexslider-min.js"></script>
+        <!-- Owl carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Magnific Popup -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <!-- Date Picker -->
+        <script src="js/bootstrap-datepicker.js"></script>
+        <!-- Stellar Parallax -->
+        <script src="js/jquery.stellar.min.js"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+        <script src="js/google_map.js"></script>
+        <!-- Main -->
+        <script src="js/main.js"></script>
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- popper -->
-    <script src="js/popper.min.js"></script>
-    <!-- bootstrap 4.1 -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- jQuery easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <!-- Flexslider -->
-    <script src="js/jquery.flexslider-min.js"></script>
-    <!-- Owl carousel -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Magnific Popup -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/magnific-popup-options.js"></script>
-    <!-- Date Picker -->
-    <script src="js/bootstrap-datepicker.js"></script>
-    <!-- Stellar Parallax -->
-    <script src="js/jquery.stellar.min.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-    <script src="js/google_map.js"></script>
-    <!-- Main -->
-    <script src="js/main.js"></script>
-
-</body>
+    </body>
 </html>

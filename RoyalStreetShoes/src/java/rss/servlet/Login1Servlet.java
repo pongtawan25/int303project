@@ -52,6 +52,7 @@ public class Login1Servlet extends HttpServlet {
                     return;
                 }
             }
+            request.setAttribute("mes", "Invalid username or password");
         }
         getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
 

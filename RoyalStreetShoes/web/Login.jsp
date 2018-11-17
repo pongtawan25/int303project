@@ -93,7 +93,12 @@
                                         <div class="form-group">
                                             <label for="password">Password</label>
                                             <input type="password" name="password" class="form-control" placeholder="Your password">
-                                        </div></div>       
+                                        </div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="offset-3 col-sm-9">
+                                        <span style="color: red">${mes}</span>
+                                    </div><br>
                                     <div class="w-100"></div>
 
                                     <div class="w-100"></div>

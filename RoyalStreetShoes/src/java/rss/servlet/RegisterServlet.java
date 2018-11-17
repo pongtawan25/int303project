@@ -44,21 +44,20 @@ public class RegisterServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username = request.getParameter("username");
-        String password = request.getParameter("passwprd");
+        String password = request.getParameter("password");
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String address = request.getParameter("address");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
         String creditcard = request.getParameter("creditcard");
-        if (false) {
+
+        if (username != null && password != null && username.trim().length() > 0 && password.trim().length() > 0) {
             CustomerJpaController cusCtrl = new CustomerJpaController(utx, emf);
-            Customer cus = new Customer(username, password, fname, lname, address, email, Integer.valueOf(phone), Integer.valueOf(creditcard));
-            request.setAttribute("cus", cus);
+            Customer cus = new Customer(username, password, fname, lname, address, email, Integer.parseInt(phone), Integer.parseInt(creditcard));
             try {
                 cusCtrl.create(cus);
-                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
-                return;
+                getServletContext().getRequestDispatcher("/Login1").forward(request, response);
             } catch (RollbackFailureException ex) {
                 Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception ex) {
