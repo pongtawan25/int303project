@@ -73,33 +73,33 @@
                     <div class="row">
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/c1.jpg);"></a>
+                                <a href="Adidas" class="featured-img" style="background-image: url(images/c1.jpg);"></a>
                                 <div class="desc">
-                                    <h2><a href="#">Adidas Collection</a></h2>
+                                    <h2><a href="Adidas">Adidas Collection</a></h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/c2.jpg);"></a>
+                                <a href="Vans" class="featured-img" style="background-image: url(images/c2.jpg);"></a>
                                 <div class="desc">
-                                    <h2><a href="#">Vans Collection</a></h2>
+                                    <h2><a href="Vans">Vans Collection</a></h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/c3.jpg);"></a>
+                                <a href="Nike" class="featured-img" style="background-image: url(images/c3.jpg);"></a>
                                 <div class="desc">
-                                    <h2><a href="#">Nike Collection</a></h2>
+                                    <h2><a href="Nike">Nike Collection</a></h2>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6 text-center">
                             <div class="featured">
-                                <a href="#" class="featured-img" style="background-image: url(images/c4.jpg);"></a>
+                                <a href="Converse" class="featured-img" style="background-image: url(images/c4.jpg);"></a>
                                 <div class="desc">
-                                    <h2><a href="#">Converse Collection</a></h2>
+                                    <h2><a href="Converse">Converse Collection</a></h2>
                                 </div>
                             </div>
                         </div>

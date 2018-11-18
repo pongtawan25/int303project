@@ -34,7 +34,7 @@
                         <li><a href="Vans">Vans</a></li>
                         <li><a href="Help">Help</a></li>
                         <li><a href="Contact">Contact</a></li>
-                        <li class="cart"><a href="#"><i class="icon-shopping-cart"></i> Cart[${cart.totalQuantity}]</a></li>
+                        <li class="cart"><a href="Cart.jsp"><i class="icon-shopping-cart"></i> Cart[${cart.totalQuantity}]</a></li>
                             <c:choose>
                                 <c:when test="${sessionScope.cus!=null}">
                                 <li class="cart"><img src="images/iconuser.png" width="30"> ${sessionScope.cus.customerfname}
