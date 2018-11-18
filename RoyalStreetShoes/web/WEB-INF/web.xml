@@ -24,6 +24,14 @@
         <servlet-name>AllServlet</servlet-name>
         <servlet-class>rss.servlet.AllServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdidasServlet</servlet-name>
+        <servlet-class>rss.servlet.AdidasServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NikeServlet</servlet-name>
+        <servlet-class>rss.servlet.NikeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>AllServlet</servlet-name>
         <url-pattern>/All</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdidasServlet</servlet-name>
+        <url-pattern>/Adidas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NikeServlet</servlet-name>
+        <url-pattern>/Nike</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
