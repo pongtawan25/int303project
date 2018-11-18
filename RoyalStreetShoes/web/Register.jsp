@@ -98,7 +98,7 @@
                                         <div class="w-100"></div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label for="fname">First Name</label>
+                                                <label>First Name</label>
                                                 <input type="text" id="fname" name="fname" class="form-control" placeholder="Your firstname">
                                             </div>
                                         </div>
@@ -112,14 +112,14 @@
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="message">Address</label>
-                                                <textarea name="message" id="message" name="address" cols="30" rows="10" class="form-control" placeholder="Your address"></textarea>
+                                                <input type="text" name="address" class="form-control" placeholder="Your address">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="email">Email</label>
-                                                <input type="text" id="email" class="form-control" placeholder="Your email">
+                                                <input type="text" id="email" name="email" class="form-control" placeholder="Your email">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>

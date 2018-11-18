@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
 import rss.jpa.model.controller.CustomerJpaController;
+import rss.jpa.model.controller.exceptions.NonexistentEntityException;
 import rss.jpa.model.controller.exceptions.RollbackFailureException;
 
 /**
@@ -52,12 +53,18 @@ public class RegisterServlet extends HttpServlet {
         String phone = request.getParameter("phone");
         String creditcard = request.getParameter("creditcard");
 
-        if (username != null && password != null && username.trim().length() > 0 && password.trim().length() > 0) {
+        if (username != null && password != null && fname != null && lname != null
+                && address != null && email != null && phone != null && creditcard != null && username.trim().length() > 0
+                && password.trim().length() > 0 && fname.trim().length() > 0 && lname.trim().length() > 0
+                && address.trim().length() > 0 && email.trim().length() > 0 && phone.trim().length() > 0
+                && creditcard.trim().length() > 0) {
             CustomerJpaController cusCtrl = new CustomerJpaController(utx, emf);
-            Customer cus = new Customer(username, password, fname, lname, address, email, Integer.parseInt(phone), Integer.parseInt(creditcard));
+            Customer cus = new Customer(username, password, fname, lname, address, email, 1150, 1112);
             try {
                 cusCtrl.create(cus);
-                getServletContext().getRequestDispatcher("/Login1").forward(request, response);
+                getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
+            } catch (NonexistentEntityException ex) {
+                Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
             } catch (RollbackFailureException ex) {
                 Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
             } catch (Exception ex) {
@@ -65,6 +72,7 @@ public class RegisterServlet extends HttpServlet {
             }
         }
         getServletContext().getRequestDispatcher("/Register.jsp").forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
