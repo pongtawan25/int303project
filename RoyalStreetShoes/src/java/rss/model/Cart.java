@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import rss.jpa.model.Bestsell;
 import rss.jpa.model.Product;
 
 /**
@@ -63,7 +64,5 @@ public class Cart implements Serializable{
     public List<LineItem>getLineItem(){
         return new ArrayList(cart.values());
     }
-
-    
-    
+ 
 }

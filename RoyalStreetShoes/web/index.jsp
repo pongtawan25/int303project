@@ -57,7 +57,7 @@
                     </ul>
                 </div>
             </aside>
-            
+
             <div class="colorlib-intro">
                 <div class="container">
                     <div class="row">
@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="colorlib-product">
                 <div class="container-fluid">
                     <div class="row">
@@ -125,7 +125,6 @@
                                         <h2><a href="#">${b.bestname}</a></h2>
                                         <span class="price">${b.bestprice} Baht</span>
                                     </div>
-
                                 </div>
                             </div>
                         </c:forEach>
