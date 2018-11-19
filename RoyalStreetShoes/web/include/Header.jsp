@@ -38,7 +38,7 @@
                             <c:choose>
                                 <c:when test="${sessionScope.cus!=null}">
                                 <li class="cart"><img src="images/iconuser.png" width="30"> ${sessionScope.cus.customerfname}
-                                    <a href="Logout">Logout</a></li>
+                                    <a href="History">History</a><a href="Logout">Logout</a></li>
                                 </c:when>
                                 <c:otherwise>
                                 <li class="cart"><a href="Login1">Login</a></li>
