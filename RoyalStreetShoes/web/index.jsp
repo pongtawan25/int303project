@@ -9,7 +9,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Royal Street Shoes</title>
+        <link rel="shortcut icon" href="images/logo.png"/>
+        <title>Royal Street Shoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -124,6 +125,9 @@
                                     <div class="desc">
                                         <h2><a href="#">${b.bestname}</a></h2>
                                         <span class="price">${b.bestprice} Baht</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <a class="btn btn-outline-dark" href="Addtocart?productid=${b.bestsellid}">Add to cart</a>
                                     </div>
                                 </div>
                             </div>

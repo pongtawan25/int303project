@@ -43,7 +43,18 @@ public class AddtocartServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        HttpSession session = request.getSession(true);
+        ProductJpaController pdCtrl = new ProductJpaController(utx, emf);
+        Cart cart = (Cart)session.getAttribute("cart");
+        if(cart == null){
+            cart = new Cart();
+            session.setAttribute("cart", cart);
+        }
+        String productid = request.getParameter("productid");
+        Product pd = pdCtrl.findProduct(productid);
+        cart.add(pd);
+        getServletContext().getRequestDispatcher("/Index").forward(request, response);
+//        response.sendRedirect("Index");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
