@@ -16,9 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.transaction.UserTransaction;
-import rss.jpa.model.Bestsell;
 import rss.jpa.model.Product;
-import rss.jpa.model.controller.BestsellJpaController;
 import rss.jpa.model.controller.ProductJpaController;
 
 /**
@@ -43,9 +41,9 @@ public class IndexServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        BestsellJpaController bestCtrl = new BestsellJpaController(utx, emf);
-        List<Bestsell> best = bestCtrl.findBestsellEntities();
-        request.setAttribute("best", best);
+        ProductJpaController pdCtrl = new ProductJpaController(utx, emf);
+        List<Product> pd = pdCtrl.findProductEntities();
+        request.setAttribute("pd", pd);
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
 

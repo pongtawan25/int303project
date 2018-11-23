@@ -53,6 +53,7 @@ public class AddtocartServlet extends HttpServlet {
         String productid = request.getParameter("productid");
         Product pd = pdCtrl.findProduct(productid);
         cart.add(pd);
+        System.out.println(cart.getTotalQuantity());
         getServletContext().getRequestDispatcher("/Index").forward(request, response);
 //        response.sendRedirect("Index");
     }
