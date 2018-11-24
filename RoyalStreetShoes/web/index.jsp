@@ -116,18 +116,18 @@
                         </div>
                     </div>
                     <div class="row row-pb-md">
-                        <c:forEach items="${pd}" var="p">
+                        <c:forEach items="${best}" var="b">
                             <div class="col-md-3 col-lg-3 mb-4 text-center">
                                 <div class="product-entry border">
                                     <a href="#" class="prod-img">
-                                        <img src="images/${p.productid}.jpg" class="img-fluid">
+                                        <img src="images/${b.bestsellid}.jpg" class="img-fluid">
                                     </a>
                                     <div class="desc">
-                                        <h2><a href="#">${p.productname}</a></h2>
-                                        <span class="price">${p.productprice} Baht</span>
+                                        <h2><a href="#">${b.bestname}</a></h2>
+                                        <span class="price">${b.bestprice} Baht</span>
                                     </div>
                                     <div class="form-group">
-                                        <a class="btn btn-outline-dark" href="Addtocart?productid=${p.productid}">Add to cart</a>
+                                        <a class="btn btn-outline-dark" href="Addtocart?productid=${b.bestsellid}">Add to cart</a>
                                     </div>
                                 </div>
                             </div>
