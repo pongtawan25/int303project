@@ -51,73 +51,27 @@ Author     : PONGTAWAN
         <div id="page">
             <jsp:include page="include/Header.jsp"/>
 
-            <div class="breadcrumbs">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <p class="bread"><span><a href="index.html">Home</a></span> / <span>All</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="colorlib-product">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 offset-sm-2 text-center colorlib-heading">
-                            <h2>All Shoes</h2>
+                            <h2>All</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-xl-3">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="side border mb-1">
-                                        <div class="block-26 mb-2">
-                                            <h3>Size</h3>
-                                            <ul>
-                                                <li><a href="#">7</a></li>
-                                                <li><a href="#">7.5</a></li>
-                                                <li><a href="#">8</a></li>
-                                                <li><a href="#">8.5</a></li>
-                                                <li><a href="#">9</a></li>
-                                                <li><a href="#">9.5</a></li>
-                                                <li><a href="#">10</a></li>
-                                                <li><a href="#">10.5</a></li>
-                                                <li><a href="#">11</a></li>
-                                                <li><a href="#">11.5</a></li>
-                                                <li><a href="#">12</a></li>
-                                                <li><a href="#">12.5</a></li>
-                                                <li><a href="#">13</a></li>
-                                                <li><a href="#">13.5</a></li>
-                                                <li><a href="#">14</a></li>
-                                                <li><a href="#">14.5</a></li>
-                                            </ul>
-                                        </div>
+                    <div class="row row-pb-md">
+                        <c:forEach items="${pd}" var="p">
+                            <div class="col-md-3 col-lg-3 mb-4 text-center">
+                                <div class="product-entry border">
+                                    <a href="#" class="prod-img">
+                                        <img src="images/${p.productid}.jpg" class="img-fluid">
+                                    </a>
+                                    <div class="desc">
+                                        <h2><a href="#">${p.productname}</a></h2>
+                                        <span class="price">${p.productprice} Baht</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-9 col-xl-9">
-                            <div class="row row-pb-md">
-                                <c:forEach items="${pd}" var="p">
-                                    <div class="col-lg-4 mb-4 text-center">
-                                        <div class="product-entry border">
-                                            <a href="#" class="prod-img">
-                                                <img src="images/${p.productid}.jpg" class="img-fluid" alt="Free html5 bootstrap 4 template">
-                                            </a>
-                                            <div class="desc">
-                                                <h2><a href="#">${p.productname}</a></h2>
-                                                <span class="price">${p.productprice}</span>
-                                            </div>
-                                            <div class="form-group">
-                                                <a class="btn btn-outline-dark" href="Addtocart?productid=${b.bestsellid}">Add to cart</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </c:forEach>
-                            </div>
-                        </div>
+                        </c:forEach>
                     </div>
                 </div>
             </div>
