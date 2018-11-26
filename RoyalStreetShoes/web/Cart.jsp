@@ -4,6 +4,7 @@
     Author     : PONGTAWAN
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -100,97 +101,51 @@
                                     <span>Remove</span>
                                 </div>
                             </div>
-                            <div class="product-cart d-flex">
-                                <div class="one-forth">
-                                    <div class="product-img" style="background-image: url(images/item-6.jpg);">
+                            <c:forEach items="${cart.lineItems}" var="l">
+
+                                <div class="product-cart d-flex">
+                                    <div class="one-forth">
+                                        <div class="product-img" style="background-image: url(images/${l.product.productid}.jpg);">
+                                        </div>
+                                        <div class="display-tc">
+                                            <h3>${l.product.productname}</h3>
+                                        </div>
                                     </div>
-                                    <div class="display-tc">
-                                        <h3>Product Name</h3>
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">
+                                            <span class="price">${l.product.productprice}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <span class="price">$68.00</span>
+                                    <div class="one-eight text-center">
+                                        <div class="text-center">
+                                            <div class="display-tc">
+                                                <a href="#">-</a>
+                                            </div>
+                                        </div>
+                                        <div class="display-tc">
+                                            <span class="price">${l.quantity}</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="display-tc">
+                                                <a href="Addtocart?productid=${l.product.productid}&&url=Cart">+</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">
+                                            <span class="price">${l.totalPrice}</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <span class="price">$120.00</span>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <a href="#" class="closed"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart d-flex">
-                                <div class="one-forth">
-                                    <div class="product-img" style="background-image: url(images/item-7.jpg);">
-                                    </div>
-                                    <div class="display-tc">
-                                        <h3>Product Name</h3>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <span class="price">$68.00</span>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <form action="#">
-                                            <input type="text" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
-                                        </form>
+                                    <div class="one-eight text-center">
+                                        <div class="display-tc">
+                                            <a href="#" class="closed"></a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <span class="price">$120.00</span>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <a href="#" class="closed"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-cart d-flex">
-                                <div class="one-forth">
-                                    <div class="product-img" style="background-image: url(images/item-8.jpg);">
-                                    </div>
-                                    <div class="display-tc">
-                                        <h3>Product Name</h3>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <span class="price">$68.00</span>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <input type="text" id="quantity" name="quantity" class="form-control input-number text-center" value="1" min="1" max="100">
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <span class="price">$120.00</span>
-                                    </div>
-                                </div>
-                                <div class="one-eight text-center">
-                                    <div class="display-tc">
-                                        <a href="#" class="closed"></a>
-                                    </div>
-                                </div>
-                            </div>
+                            </c:forEach>
                         </div>
                     </div>
+
                     <div class="row row-pb-lg">
                         <div class="col-md-12">
                             <div class="total-wrap">

@@ -27,11 +27,12 @@ import rss.model.Cart;
  * @author PONGTAWAN
  */
 public class AddtocartServlet extends HttpServlet {
-    
+
     @Resource
     UserTransaction utx;
     @PersistenceUnit
     EntityManagerFactory emf;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -45,8 +46,8 @@ public class AddtocartServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         ProductJpaController pdCtrl = new ProductJpaController(utx, emf);
-        Cart cart = (Cart)session.getAttribute("cart");
-        if(cart == null){
+        Cart cart = (Cart) session.getAttribute("cart");
+        if (cart == null) {
             cart = new Cart();
             session.setAttribute("cart", cart);
         }
@@ -54,7 +55,13 @@ public class AddtocartServlet extends HttpServlet {
         Product pd = pdCtrl.findProduct(productid);
         cart.add(pd);
         System.out.println(cart.getTotalQuantity());
-        getServletContext().getRequestDispatcher("/Index").forward(request, response);
+        String url = request.getParameter("url");
+        if (url.equals("Index")) {
+            getServletContext().getRequestDispatcher("/Index").forward(request, response);
+        }
+        if (url.equals("Cart")) {
+            getServletContext().getRequestDispatcher("/Cart.jsp").forward(request, response);
+        }
 //        response.sendRedirect("Index");
     }
 

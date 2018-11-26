@@ -5,6 +5,7 @@
  */
 package rss.model;
 
+import java.math.BigDecimal;
 import rss.jpa.model.Product;
 
 /**
@@ -12,25 +13,26 @@ import rss.jpa.model.Product;
  * @author PONGTAWAN
  */
 public class LineItem {
-    private Product product;
-    private int salePrice;
-    private int quantity;
+
+    Product product;
+    int salePrice;
+    int quantity;
 
     public LineItem() {
-    }
-
-    public LineItem(Product product) {
-        this.product = product;
     }
 
     public LineItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
-        this.salePrice = product.getProductprice();
+        this.salePrice=product.getProductprice();
+    }
+
+    public LineItem(Product product) {
+        this(product,1);
     }
     
-    public int getTotalPrice() {
-        return this.quantity * this.salePrice;
+    public int getTotalPrice(){
+        return this.salePrice*this.quantity;
     }
 
     public Product getProduct() {
@@ -56,10 +58,4 @@ public class LineItem {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    
-    
-    
-    
-    
-    
 }
