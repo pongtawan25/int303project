@@ -151,14 +151,15 @@
                             <div class="total-wrap">
                                 <div class="row">
                                     <div class="col-sm-8">
-                                        <form action="#">
+                                        <form action="Checkout">
                                             <div class="row form-group">
-                                                <div class="col-sm-9">
-                                                    <input type="text" name="quantity" class="form-control input-number" placeholder="Your Coupon Number...">
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <input type="submit" value="Apply Coupon" class="btn btn-primary">
-                                                </div>
+                                                <c:choose>
+                                                    <c:when test="${cart.totalQuantity > 0}">
+                                                        <div class="col-sm-3">
+                                                            <input type="submit" value="Confirm" class="btn btn-primary">
+                                                        </div>
+                                                    </c:when>
+                                                </c:choose>
                                             </div>
                                         </form>
                                     </div>

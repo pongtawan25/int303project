@@ -27,12 +27,8 @@
                 <p>
                 <ul class="colorlib-footer-links">
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Returns/Exchange</a></li>
-                    <li><a href="#">Gift Voucher</a></li>
-                    <li><a href="#">Wishlist</a></li>
-                    <li><a href="#">Special</a></li>
-                    <li><a href="#">Customer Services</a></li>
-                    <li><a href="#">Site maps</a></li>
+                    <li><a href="#">Help</a></li>
+                    
                 </ul>
                 </p>
             </div>
@@ -44,7 +40,7 @@
                     <li><a href="#">Delivery Information</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Support</a></li>
-                    <li><a href="#">Order Tracking</a></li>
+                   
                 </ul>
                 </p>
             </div>
@@ -52,9 +48,11 @@
             <div class="col footer-col">
                 <h4>News</h4>
                 <ul class="colorlib-footer-links">
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="#">Press</a></li>
-                    <li><a href="#">Exhibitions</a></li>
+                    <li><a target ="_blank" href="https://www.nike.com/th/th">Nike</a></li>
+                    <li><a target ="_blank" href=" https://www.adidas.co.th/th" </a>Adidas</a></li>
+                    <li><a target ="_blank" href="https://www.converse.com/us/en_us/c/converse">Converse</a></li>
+                    <li><a target ="_blank" href="https://www.vans.com/">Vans</a></li>
+                    
                 </ul>
             </div>
 
