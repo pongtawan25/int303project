@@ -16,21 +16,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
-import rss.jpa.model.Bestsell;
 import rss.jpa.model.Product;
-import rss.jpa.model.controller.BestsellJpaController;
 import rss.jpa.model.controller.ProductJpaController;
 import rss.model.Cart;
 
 /**
  *
- * @author PONGTAWAN
+ * @author Tan
  */
-public class AddtocartServlet extends HttpServlet {
+public class RemovetocartServlet extends HttpServlet {
 
     @Resource
     UserTransaction utx;
-    @PersistenceUnit
+    @PersistenceUnit(unitName = "RoyalStreetShoesPU")
     EntityManagerFactory emf;
 
     /**
@@ -45,38 +43,19 @@ public class AddtocartServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession(true);
-        ProductJpaController pdCtrl = new ProductJpaController(utx, emf);
-        Cart cart = (Cart) session.getAttribute("cart");
+        Cart cart = (Cart)session.getAttribute("cart");
         if (cart == null) {
             cart = new Cart();
             session.setAttribute("cart", cart);
         }
         String productid = request.getParameter("productid");
-        Product pd = pdCtrl.findProduct(productid);
-        cart.add(pd);
+        ProductJpaController productJpaCtrl = new ProductJpaController(utx, emf);
+        Product product = productJpaCtrl.findProduct(productid);
+        cart.remove(product);
         String url = request.getParameter("url");
-        if (url.equals("Index")) {
-            response.sendRedirect("Index");
-        }
         if (url.equals("Cart")) {
             response.sendRedirect("Cart");
         }
-        if (url.equals("All")) {
-            response.sendRedirect("All");
-        }
-        if (url.equals("Adidas")) {
-            response.sendRedirect("Adidas");
-        }
-        if (url.equals("Nike")) {
-            response.sendRedirect("Nike");
-        }
-        if (url.equals("Converse")) {
-            response.sendRedirect("Converse");
-        }
-        if (url.equals("Vans")) {
-            response.sendRedirect("Vans");
-        }
-//        response.sendRedirect("Index");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

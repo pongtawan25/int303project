@@ -7,31 +7,16 @@ package rss.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.annotation.Resource;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.transaction.UserTransaction;
-import rss.jpa.model.Bestsell;
-import rss.jpa.model.Product;
-import rss.jpa.model.controller.BestsellJpaController;
-import rss.jpa.model.controller.ProductJpaController;
-import rss.model.Cart;
 
 /**
  *
- * @author PONGTAWAN
+ * @author Tan
  */
-public class AddtocartServlet extends HttpServlet {
-
-    @Resource
-    UserTransaction utx;
-    @PersistenceUnit
-    EntityManagerFactory emf;
+public class CartServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,39 +29,7 @@ public class AddtocartServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(true);
-        ProductJpaController pdCtrl = new ProductJpaController(utx, emf);
-        Cart cart = (Cart) session.getAttribute("cart");
-        if (cart == null) {
-            cart = new Cart();
-            session.setAttribute("cart", cart);
-        }
-        String productid = request.getParameter("productid");
-        Product pd = pdCtrl.findProduct(productid);
-        cart.add(pd);
-        String url = request.getParameter("url");
-        if (url.equals("Index")) {
-            response.sendRedirect("Index");
-        }
-        if (url.equals("Cart")) {
-            response.sendRedirect("Cart");
-        }
-        if (url.equals("All")) {
-            response.sendRedirect("All");
-        }
-        if (url.equals("Adidas")) {
-            response.sendRedirect("Adidas");
-        }
-        if (url.equals("Nike")) {
-            response.sendRedirect("Nike");
-        }
-        if (url.equals("Converse")) {
-            response.sendRedirect("Converse");
-        }
-        if (url.equals("Vans")) {
-            response.sendRedirect("Vans");
-        }
-//        response.sendRedirect("Index");
+        getServletContext().getRequestDispatcher("/Cart.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

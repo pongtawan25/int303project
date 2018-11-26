@@ -119,7 +119,7 @@
                                     <div class="one-eight text-center">
                                         <div class="text-center">
                                             <div class="display-tc">
-                                                <a href="#">-</a>
+                                                <a href="">-</a>
                                             </div>
                                         </div>
                                         <div class="display-tc">
@@ -138,7 +138,7 @@
                                     </div>
                                     <div class="one-eight text-center">
                                         <div class="display-tc">
-                                            <a href="#" class="closed"></a>
+                                            <a href="Removetocart?productid=${l.product.productid}&&url=Cart" class="closed"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -165,12 +165,10 @@
                                     <div class="col-sm-4 text-center">
                                         <div class="total">
                                             <div class="sub">
-                                                <p><span>Subtotal:</span> <span>$200.00</span></p>
-                                                <p><span>Delivery:</span> <span>$0.00</span></p>
-                                                <p><span>Discount:</span> <span>$45.00</span></p>
+                                                <p><span>Quantity:</span> <span>${cart.totalQuantity}</span></p>     
                                             </div>
                                             <div class="grand-total">
-                                                <p><span><strong>Total:</strong></span> <span>$450.00</span></p>
+                                                <p><span><strong>Total:</strong></span> <span>${cart.totalPrice}</span></p>
                                             </div>
                                         </div>
                                     </div>

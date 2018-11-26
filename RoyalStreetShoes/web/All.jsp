@@ -69,6 +69,9 @@ Author     : PONGTAWAN
                                         <h2><a href="#">${p.productname}</a></h2>
                                         <span class="price">${p.productprice} Baht</span>
                                     </div>
+                                    <div class="form-group">
+                                        <a class="btn btn-outline-dark" href="Addtocart?productid=${p.productid}&&url=All">Add to cart</a>
+                                    </div>
                                 </div>
                             </div>
                         </c:forEach>

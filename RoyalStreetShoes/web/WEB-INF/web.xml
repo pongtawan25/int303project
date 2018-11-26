@@ -44,6 +44,14 @@
         <servlet-name>AddtocartServlet</servlet-name>
         <servlet-class>rss.servlet.AddtocartServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>rss.servlet.CartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RemovetocartServlet</servlet-name>
+        <servlet-class>rss.servlet.RemovetocartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -87,6 +95,14 @@
     <servlet-mapping>
         <servlet-name>AddtocartServlet</servlet-name>
         <url-pattern>/Addtocart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/Cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemovetocartServlet</servlet-name>
+        <url-pattern>/Removetocart</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

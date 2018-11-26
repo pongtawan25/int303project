@@ -44,10 +44,10 @@ private Map<String, LineItem> cart;
     }
     
     public int getTotalPrice(){
-        int sum = 0 ;
+        int sum = 0;
         Collection<LineItem> lineItems = cart.values();
         for (LineItem lineItem : lineItems) {
-            sum *= lineItem.salePrice;
+            sum = sum + lineItem.getTotalPrice();
         }
         return sum;
     }
