@@ -133,8 +133,8 @@
                                                     </c:forEach>
                                                 </ul>
                                             </li>
-                                            <li><span>Shipping</span> <span>$0.00</span></li>
-                                            <li><span>Order Total</span> <span>$180.00</span></li>
+                                            <li><span>Shipping</span> <span>2222</span></li>
+                                            <li><span>Order Total</span> <span>00000</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -143,25 +143,25 @@
 
                                 <div class="col-md-12">
                                     <div class="cart-detail">
-                                        <h2>Payment Method</h2>
+                                        <h2>Transport Method</h2>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="radio">
-                                                    <label><input type="radio" name="optradio"> Direct Bank Tranfer</label>
+                                                    <a href="#">Economy</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="radio">
-                                                    <label><input type="radio" name="optradio"> Check Payment</label>
+                                                    <a href="#">Ems</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="radio">
-                                                    <label><input type="radio" name="optradio"> Paypal</label>
+                                                    <a href="#">Kerry</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -6,7 +6,6 @@
 package rss.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
@@ -16,9 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
-import rss.jpa.model.Bestsell;
 import rss.jpa.model.Product;
-import rss.jpa.model.controller.BestsellJpaController;
 import rss.jpa.model.controller.ProductJpaController;
 import rss.model.Cart;
 

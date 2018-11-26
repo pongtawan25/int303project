@@ -18,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
 import rss.jpa.model.controller.CustomerJpaController;
+import rss.model.Cart;
 
 /**
  *

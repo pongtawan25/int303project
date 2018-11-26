@@ -52,6 +52,23 @@ private Map<String, LineItem> cart;
         return sum;
     }
     
+    //ขกสร้าง model ใหม่
+//    public int getEconomy(){
+//        return 100;
+//    }
+//    public int getEms(){
+//        return 150;
+//    }
+//    public int getKerry(){
+//        return 200;
+//    }
+//    public int getShippingPrice(int ship){
+//        Collection<LineItem> lineItems = cart.values();
+//        int sum = ((LineItem)lineItems).getTotalPrice();
+//        return sum + ship;
+//    }
+    //------------
+    
     public int getTotalQuantity(){
         int sum =0;
         Collection<LineItem> lineItems = cart.values();
