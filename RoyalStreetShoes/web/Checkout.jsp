@@ -130,11 +130,11 @@
                                                     <span>SubTotal</span> <span>${cart.totalPrice}</span>
                                                     <c:forEach items="${cart.lineItems}" var="l">
                                                         <li><span>${l.quantity} x ${l.product.productname}</span> <span>${l.totalPrice}</span></li>
-                                                    </c:forEach>
+                                                        </c:forEach>
                                                 </ul>
                                             </li>
-                                            <li><span>Shipping</span> <span>2222</span></li>
-                                            <li><span>Order Total</span> <span>00000</span></li>
+                                            <li><span>Shipping</span> <span>0</span></li>
+                                            <li><span>Order Total</span> <span>${cart.totalPrice}</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -147,21 +147,21 @@
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="radio">
-                                                    <a href="#">Economy</a>
+                                                    <a class="btn btn-block" href="Checkout?send=economy">Economy</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="radio">
-                                                    <a href="#">Ems</a>
+                                                    <a class="btn btn-block" href="Checkout?send=ems">Ems</a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <div class="radio">
-                                                    <a href="#">Kerry</a>
+                                                    <a class="btn btn-block" href="Checkout?send=kerry">Kerry</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -184,7 +184,9 @@
                     </div>
                 </div>
             </div>
+            <jsp:include page="include/Footer.jsp"/>
         </div>
+
         <div class="gototop js-top">
             <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
         </div>

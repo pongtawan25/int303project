@@ -44,6 +44,7 @@ public class CheckoutServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(false);
         Customer cus = (Customer) session.getAttribute("cus");
+        String send = request.getParameter("send");
         if (cus != null) {
             getServletContext().getRequestDispatcher("/Checkout.jsp").forward(request, response);
         }

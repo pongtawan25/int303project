@@ -127,7 +127,7 @@
                                         <span class="price">${b.bestprice} Baht</span>
                                     </div>
                                     <div class="form-group">
-                                        <a class="btn btn-outline-dark" href="Addtocart?productid=${b.bestsellid}&&url=Index&&size=7">Add to cart</a>
+                                        <a class="btn btn-outline-dark" href="Addtocart?productid=${b.bestsellid}&&url=Index">Add to cart</a>
                                     </div>
                                 </div>
                             </div>

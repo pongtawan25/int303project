@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import rss.model.Cart;
 
 /**
  *
@@ -29,6 +31,9 @@ public class CartServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession(false);
+        Cart cart = (Cart)session.getAttribute("cart");
+        request.setAttribute("cart", cart);
         getServletContext().getRequestDispatcher("/Cart.jsp").forward(request, response);
     }
 

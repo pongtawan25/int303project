@@ -21,6 +21,7 @@ import rss.jpa.model.Product;
 public class Cart implements Serializable {
 
 private Map<String, LineItem> cart;
+private int ship;
     
     public Cart() {
         cart = new HashMap();
@@ -53,20 +54,23 @@ private Map<String, LineItem> cart;
     }
     
     //ขกสร้าง model ใหม่
-//    public int getEconomy(){
-//        return 100;
-//    }
-//    public int getEms(){
-//        return 150;
-//    }
-//    public int getKerry(){
-//        return 200;
-//    }
-//    public int getShippingPrice(int ship){
-//        Collection<LineItem> lineItems = cart.values();
-//        int sum = ((LineItem)lineItems).getTotalPrice();
-//        return sum + ship;
-//    }
+    public int getEconomy(){
+        return 100;
+    }
+    public int getEms(){
+        return 150;
+    }
+    public int getKerry(){
+        return 200;
+    }
+    public void setShippingPrice(int ship){
+        this.ship = ship;
+    }
+    public int getShippingPrice(){
+        Collection<LineItem> lineItems = cart.values();
+        int sum = ((LineItem)lineItems).getTotalPrice();
+        return sum + this.ship;
+    }
     //------------
     
     public int getTotalQuantity(){

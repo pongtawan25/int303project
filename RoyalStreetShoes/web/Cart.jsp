@@ -151,17 +151,15 @@
                             <div class="total-wrap">
                                 <div class="row">
                                     <div class="col-sm-8">
-                                        <form action="Checkout">
-                                            <div class="row form-group">
-                                                <c:choose>
-                                                    <c:when test="${cart.totalQuantity > 0}">
-                                                        <div class="col-sm-3">
-                                                            <input type="submit" value="Confirm" class="btn btn-primary">
-                                                        </div>
-                                                    </c:when>
-                                                </c:choose>
-                                            </div>
-                                        </form>
+                                        <div class="row form-group">
+                                            <c:choose>
+                                                <c:when test="${cart.totalQuantity > 0}">
+                                                    <div class="col-sm-3">
+                                                        <a href="Checkout" class="btn btn-primary">Confirm</a>
+                                                    </div>
+                                                </c:when>
+                                            </c:choose>
+                                        </div>
                                     </div>
                                     <div class="col-sm-4 text-center">
                                         <div class="total">
