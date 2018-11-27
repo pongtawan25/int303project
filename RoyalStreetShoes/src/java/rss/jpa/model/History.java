@@ -80,6 +80,16 @@ public class History implements Serializable {
         this.time = time;
     }
 
+    public History(Integer historyid, String productname, int productprice, Date time, Customer customerid, Product productid) {
+        this.historyid = historyid;
+        this.productname = productname;
+        this.productprice = productprice;
+        this.time = time;
+        this.customerid = customerid;
+        this.productid = productid;
+    }
+    
+
     public Integer getHistoryid() {
         return historyid;
     }

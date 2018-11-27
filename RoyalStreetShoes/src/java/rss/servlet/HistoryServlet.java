@@ -7,6 +7,9 @@ package rss.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
@@ -14,17 +17,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
-import rss.jpa.model.controller.CustomerJpaController;
+import rss.jpa.model.History;
+import rss.jpa.model.controller.HistoryJpaController;
 import rss.model.Cart;
+import rss.model.LineItem;
 
 /**
  *
  * @author Tan
  */
-public class CheckoutServlet extends HttpServlet {
+public class HistoryServlet extends HttpServlet {
 
     @Resource
     UserTransaction utx;
@@ -42,16 +46,10 @@ public class CheckoutServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
-        Customer cus = (Customer) session.getAttribute("cus");
-        if (cus != null) {
-            getServletContext().getRequestDispatcher("/Checkout.jsp").forward(request, response);
-        }
-        getServletContext().getRequestDispatcher("/Login1").forward(request, response);
-
+        
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

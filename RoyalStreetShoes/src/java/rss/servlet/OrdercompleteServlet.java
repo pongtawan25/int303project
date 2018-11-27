@@ -7,6 +7,9 @@ package rss.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.Resource;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
@@ -14,23 +17,23 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
-import rss.jpa.model.controller.CustomerJpaController;
+import rss.jpa.model.History;
+import rss.jpa.model.controller.HistoryJpaController;
 import rss.model.Cart;
+import rss.model.LineItem;
 
 /**
  *
  * @author Tan
  */
-public class CheckoutServlet extends HttpServlet {
-
+public class OrdercompleteServlet extends HttpServlet {
+    
     @Resource
     UserTransaction utx;
     @PersistenceUnit(unitName = "RoyalStreetShoesPU")
     EntityManagerFactory emf;
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -42,13 +45,23 @@ public class CheckoutServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
-        Customer cus = (Customer) session.getAttribute("cus");
+        Customer cus = (Customer) request.getAttribute("cus");
         if (cus != null) {
-            getServletContext().getRequestDispatcher("/Checkout.jsp").forward(request, response);
-        }
-        getServletContext().getRequestDispatcher("/Login1").forward(request, response);
+            Cart cart = (Cart) request.getAttribute("cart");
+            LineItem line = (LineItem) cart.getLineItems();
+            String name = line.getProduct().getProductname();
+            int price = line.getProduct().getProductprice();
 
+            HistoryJpaController hisCtrl = new HistoryJpaController(utx, emf);
+            History his = new History(hisCtrl.getHistoryCount(), name, price, new Date(), cus, line.getProduct());
+            try {
+                hisCtrl.create(his);
+            } catch (Exception ex) {
+                Logger.getLogger(HistoryServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+        getServletContext().getRequestDispatcher("/Ordercomplete.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
