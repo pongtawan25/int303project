@@ -8,6 +8,7 @@ package rss.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
@@ -17,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
 import rss.jpa.model.History;
@@ -29,11 +31,12 @@ import rss.model.LineItem;
  * @author Tan
  */
 public class OrdercompleteServlet extends HttpServlet {
-    
+
     @Resource
     UserTransaction utx;
     @PersistenceUnit(unitName = "RoyalStreetShoesPU")
     EntityManagerFactory emf;
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -45,22 +48,6 @@ public class OrdercompleteServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Customer cus = (Customer) request.getAttribute("cus");
-        if (cus != null) {
-            Cart cart = (Cart) request.getAttribute("cart");
-            LineItem line = (LineItem) cart.getLineItems();
-            String name = line.getProduct().getProductname();
-            int price = line.getProduct().getProductprice();
-
-            HistoryJpaController hisCtrl = new HistoryJpaController(utx, emf);
-            History his = new History(hisCtrl.getHistoryCount(), name, price, new Date(), cus, line.getProduct());
-            try {
-                hisCtrl.create(his);
-            } catch (Exception ex) {
-                Logger.getLogger(HistoryServlet.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-        }
         getServletContext().getRequestDispatcher("/Ordercomplete.jsp").forward(request, response);
     }
 
