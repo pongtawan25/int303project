@@ -22,6 +22,7 @@ import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
 import rss.jpa.model.History;
+import rss.jpa.model.Product;
 import rss.jpa.model.controller.HistoryJpaController;
 import rss.model.Cart;
 import rss.model.LineItem;
@@ -50,19 +51,11 @@ public class OrdercompleteServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession(false);
         Customer cus = (Customer) session.getAttribute("cus");
-        Cart cart = (Cart) session.getAttribute("cart");
-        LineItem line = (LineItem) cart.getLineItems();
         if (cus != null) {
-            HistoryJpaController hisCtrl = new HistoryJpaController(utx, emf);
-            History his = new History(hisCtrl.getHistoryCount(), line.getProduct().getProductname(), line.getProduct().getProductprice(), new Date(), cus, line.getProduct());
-            try {
-                hisCtrl.create(his);
-                session.removeAttribute("cart");
-            } catch (Exception ex) {
-                Logger.getLogger(OrdercompleteServlet.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            session.removeAttribute("cart");
+            getServletContext().getRequestDispatcher("/Ordercomplete.jsp").forward(request, response);
         }
-        getServletContext().getRequestDispatcher("/Ordercomplete.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/Login1").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

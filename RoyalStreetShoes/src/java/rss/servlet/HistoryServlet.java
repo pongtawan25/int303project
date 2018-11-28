@@ -7,7 +7,9 @@ package rss.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
@@ -17,6 +19,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import rss.jpa.model.Customer;
 import rss.jpa.model.History;
@@ -46,7 +49,22 @@ public class HistoryServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        HttpSession session = request.getSession(false);
+        Customer cus = (Customer) session.getAttribute("cus");
+        if (cus != null) {
+            HistoryJpaController hisCtrl = new HistoryJpaController(utx, emf);
+            List<History> his = hisCtrl.findHistoryEntities();
+            List<History> hisList = new ArrayList<>();
+            for (History h : his) {
+                if (h.getCustomerid().getCustomerid().equals(cus.getCustomerid())) {
+                    hisList.add(h);
+                }
+            }
+            cus.setHistoryList(hisList);
+            request.setAttribute("cus", cus);
+            getServletContext().getRequestDispatcher("/History.jsp").forward(request, response);
+        }
+        getServletContext().getRequestDispatcher("/Login1").forward(request, response);
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

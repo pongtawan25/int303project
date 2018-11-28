@@ -146,7 +146,7 @@
                                         <h2>Transport Method</h2>
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <a class="btn btn-outline-dark" href="Checkout?send=eco">Economy</a>
+                                                <a class="btn btn-dark" href="Checkout?send=eco">Economy</a>
                                                 <p>6 - 7 Day</p>
                                             </div>
                                         </div>
