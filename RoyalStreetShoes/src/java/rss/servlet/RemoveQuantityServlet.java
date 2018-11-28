@@ -22,15 +22,14 @@ import rss.model.Cart;
 
 /**
  *
- * @author Tan
+ * @author Panupong
  */
-public class RemovetocartServlet extends HttpServlet {
+public class RemoveQuantityServlet extends HttpServlet {
 
     @Resource
     UserTransaction utx;
     @PersistenceUnit(unitName = "RoyalStreetShoesPU")
     EntityManagerFactory emf;
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -51,7 +50,7 @@ public class RemovetocartServlet extends HttpServlet {
         String productid = request.getParameter("productid");
         ProductJpaController productJpaCtrl = new ProductJpaController(utx, emf);
         Product product = productJpaCtrl.findProduct(productid);
-        cart.remove(product);
+        cart.removeQuantity(product);
         response.sendRedirect("Cart");
     }
 

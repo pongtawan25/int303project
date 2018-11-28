@@ -44,6 +44,13 @@ private int ship;
         cart.remove(productCode);
     }
     
+    public void removeQuantity(Product p){
+        LineItem line = cart.get(p.getProductid());
+        if(line.getQuantity()>0){
+            line.setQuantity(line.getQuantity() - 1);
+        }
+    }
+    
     public int getTotalPrice(){
         int sum = 0;
         Collection<LineItem> lineItems = cart.values();

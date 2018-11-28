@@ -119,7 +119,7 @@
                                     <div class="one-eight text-center">
                                         <div class="text-center">
                                             <div class="display-tc">
-                                                <a href="">-</a>
+                                                <a href="RemoveQuantity?productid=${l.product.productid}">-</a>
                                             </div>
                                         </div>
                                         <div class="display-tc">
@@ -138,7 +138,7 @@
                                     </div>
                                     <div class="one-eight text-center">
                                         <div class="display-tc">
-                                            <a href="Removetocart?productid=${l.product.productid}&&url=Cart" class="closed"></a>
+                                            <a href="Removetocart?productid=${l.product.productid}" class="closed"></a>
                                         </div>
                                     </div>
                                 </div>

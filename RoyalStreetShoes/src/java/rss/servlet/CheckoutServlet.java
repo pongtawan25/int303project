@@ -25,7 +25,7 @@ import rss.model.Cart;
  * @author Tan
  */
 public class CheckoutServlet extends HttpServlet {
-    
+
     @Resource
     UserTransaction utx;
     @PersistenceUnit(unitName = "RoyalStreetShoesPU")
@@ -45,13 +45,10 @@ public class CheckoutServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         Customer cus = (Customer) session.getAttribute("cus");
         if (cus != null) {
-            Cart cart = (Cart) session.getAttribute("cart");
-            cart.setShippingPrice(100);
-            session.setAttribute("cart", cart);
             getServletContext().getRequestDispatcher("/Checkout.jsp").forward(request, response);
         }
         getServletContext().getRequestDispatcher("/Login1").forward(request, response);
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

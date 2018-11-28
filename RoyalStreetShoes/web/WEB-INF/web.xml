@@ -64,6 +64,10 @@
         <servlet-name>OrderServlet</servlet-name>
         <servlet-class>rss.servlet.OrdercompleteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RemoveQuantityServlet</servlet-name>
+        <servlet-class>rss.servlet.RemoveQuantityServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -127,6 +131,10 @@
     <servlet-mapping>
         <servlet-name>OrderServlet</servlet-name>
         <url-pattern>/Order</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveQuantityServlet</servlet-name>
+        <url-pattern>/RemoveQuantity</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
