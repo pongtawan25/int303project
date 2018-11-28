@@ -127,14 +127,14 @@
                                         <ul>
                                             <li>
                                                 <ul>
-                                                    <span>SubTotal</span> <span>${cart.totalPrice}</span>
                                                     <c:forEach items="${cart.lineItems}" var="l">
                                                         <li><span>${l.quantity} x ${l.product.productname}</span> <span>${l.totalPrice}</span></li>
                                                         </c:forEach>
+                                                    <span>SubTotal</span> <span>${cart.totalPrice}</span>
                                                 </ul>
                                             </li>
                                             <li><span>Shipping</span> <span>0</span></li>
-                                            <li><span>Order Total</span> <span>${cart.totalPrice}</span></li>
+                                            <li><span>Order Total</span> <span>${cart.shippingPrice}</span></li>
                                         </ul>
                                     </div>
                                 </div>
