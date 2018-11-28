@@ -155,7 +155,7 @@
                                             <c:choose>
                                                 <c:when test="${cart.totalQuantity > 0}">
                                                     <div class="col-sm-3">
-                                                        <a href="Checkout" class="btn btn-primary">Confirm</a>
+                                                        <a href="Checkout?send=eco" class="btn btn-primary">Confirm</a>
                                                     </div>
                                                 </c:when>
                                             </c:choose>

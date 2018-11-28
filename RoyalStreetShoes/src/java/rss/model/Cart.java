@@ -6,7 +6,6 @@
 package rss.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -20,13 +19,13 @@ import rss.jpa.model.Product;
  */
 public class Cart implements Serializable {
 
-private Map<String, LineItem> cart;
-private int ship;
-    
+    private Map<String, LineItem> cart;
+    private int ship;
+
     public Cart() {
         cart = new HashMap();
     }
-    
+
     public void add(Product p) {
         LineItem line = cart.get(p.getProductid());
         if (line == null) {
@@ -35,23 +34,23 @@ private int ship;
             line.setQuantity(line.getQuantity() + 1);
         }
     }
-    
+
     public void remove(Product p) {
         this.remove(p.getProductid());
     }
-    
+
     public void remove(String productCode) {
         cart.remove(productCode);
     }
-    
-    public void removeQuantity(Product p){
+
+    public void removeQuantity(Product p) {
         LineItem line = cart.get(p.getProductid());
-        if(line.getQuantity()>0){
+        if (line.getQuantity() > 0) {
             line.setQuantity(line.getQuantity() - 1);
         }
     }
-    
-    public int getTotalPrice(){
+
+    public int getTotalPrice() {
         int sum = 0;
         Collection<LineItem> lineItems = cart.values();
         for (LineItem lineItem : lineItems) {
@@ -59,9 +58,36 @@ private int ship;
         }
         return sum;
     }
+
+    public int getTotalQuantity() {
+        int sum = 0;
+        Collection<LineItem> lineItems = cart.values();
+        for (LineItem lineItem : lineItems) {
+            sum += lineItem.getQuantity();
+        }
+        return sum;
+    }
+
+    public List<LineItem> getLineItems() {
+        return new ArrayList(cart.values());
+    }
     
-    //ขกสร้าง model ใหม่
-    public int getEconomy(){
+    
+    public void setShipPrice(int ship){
+        this.ship = ship;
+    }
+    public int getShipPrice(){
+        return ship;
+    }
+    public int getTotalShipPrice(){
+        int sum = 0;
+        Collection<LineItem> lineItems = cart.values();
+        for (LineItem lineItem : lineItems) {
+            sum = sum + lineItem.getTotalPrice();
+        }
+        return sum + ship;
+    }
+    public int getEco(){
         return 100;
     }
     public int getEms(){
@@ -69,27 +95,5 @@ private int ship;
     }
     public int getKerry(){
         return 200;
-    }
-    public void setShippingPrice(int ship){
-        this.ship = ship;
-    }
-    public int getShippingPrice(){
-        Collection<LineItem> lineItems = cart.values();
-        int sum = ((LineItem)lineItems).getTotalPrice();
-        return sum + this.ship;
-    }
-    //------------
-    
-    public int getTotalQuantity(){
-        int sum =0;
-        Collection<LineItem> lineItems = cart.values();
-        for (LineItem lineItem : lineItems) {
-            sum += lineItem.getQuantity();
-        }
-        return sum;
-    }
-    
-    public List<LineItem> getLineItems(){
-        return new ArrayList(cart.values());
     }
 }

@@ -48,6 +48,20 @@ public class OrdercompleteServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        HttpSession session = request.getSession(false);
+        Customer cus = (Customer) session.getAttribute("cus");
+        Cart cart = (Cart) session.getAttribute("cart");
+        LineItem line = (LineItem) cart.getLineItems();
+        if (cus != null) {
+            HistoryJpaController hisCtrl = new HistoryJpaController(utx, emf);
+            History his = new History(hisCtrl.getHistoryCount(), line.getProduct().getProductname(), line.getProduct().getProductprice(), new Date(), cus, line.getProduct());
+            try {
+                hisCtrl.create(his);
+                session.removeAttribute("cart");
+            } catch (Exception ex) {
+                Logger.getLogger(OrdercompleteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         getServletContext().getRequestDispatcher("/Ordercomplete.jsp").forward(request, response);
     }
 

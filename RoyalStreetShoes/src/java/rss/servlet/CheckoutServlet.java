@@ -42,9 +42,21 @@ public class CheckoutServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession(true);
         Customer cus = (Customer) session.getAttribute("cus");
         if (cus != null) {
+            Cart cart = (Cart) session.getAttribute("cart");
+            String send = request.getParameter("send");
+            if (send.equals("eco")) {
+                cart.setShipPrice(cart.getEco());
+                request.setAttribute("cart", cart);
+            }else if (send.equals("ems")) {
+                cart.setShipPrice(cart.getEms());
+                request.setAttribute("cart", cart);
+            } else if (send.equals("kerry")) {
+                cart.setShipPrice(cart.getKerry());
+                request.setAttribute("cart", cart);
+            }
             getServletContext().getRequestDispatcher("/Checkout.jsp").forward(request, response);
         }
         getServletContext().getRequestDispatcher("/Login1").forward(request, response);

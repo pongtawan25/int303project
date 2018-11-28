@@ -133,8 +133,8 @@
                                                     <span>SubTotal</span> <span>${cart.totalPrice}</span>
                                                 </ul>
                                             </li>
-                                            <li><span>Shipping</span> <span>0</span></li>
-                                            <li><span>Order Total</span> <span>${cart.shippingPrice}</span></li>
+                                            <li><span>Shipping</span> <span>${cart.shipPrice}</span></li>
+                                            <li><span>Order Total</span> <span>${cart.totalShipPrice}</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -146,23 +146,20 @@
                                         <h2>Transport Method</h2>
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <div class="radio">
-                                                    <a class="btn btn-block" href="Checkout?send=economy">Economy</a>
-                                                </div>
+                                                <a class="btn btn-outline-dark" href="Checkout?send=eco">Economy</a>
+                                                <p>6 - 7 Day</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <div class="radio">
-                                                    <a class="btn btn-block" href="Checkout?send=ems">Ems</a>
-                                                </div>
+                                                <a class="btn btn-dark" href="Checkout?send=ems">Ems</a>
+                                                <p>3 - 4 Day</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
-                                                <div class="radio">
-                                                    <a class="btn btn-block" href="Checkout?send=kerry">Kerry</a>
-                                                </div>
+                                                <a class="btn btn-dark" href="Checkout?send=kerry">Kerry</a>
+                                                <p>1 - 2 Day</p>
                                             </div>
                                         </div>
                                         <div class="form-group">
