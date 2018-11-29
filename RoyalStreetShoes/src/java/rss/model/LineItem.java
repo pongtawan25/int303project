@@ -14,9 +14,9 @@ import rss.jpa.model.Product;
  */
 public class LineItem {
 
-    Product product;
-    int salePrice;
-    int quantity;
+    private Product product;
+    private int salePrice;
+    private int quantity;
 
     public LineItem() {
     }
