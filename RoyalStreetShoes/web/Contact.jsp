@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Register
-    Created on : Nov 15, 2018, 4:36:42 PM
+    Document   : Contact
+    Created on : Nov 28, 2018, 6:33:05 PM
     Author     : Tan
 --%>
 
@@ -8,7 +8,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Footwear - Free Bootstrap 4 Template by Colorlib</title>
+        <link rel="shortcut icon" href="images/logo.png"/>
+        <title>Royal Street Shoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -61,98 +62,87 @@
         <div id="page">
             <jsp:include page="include/Header.jsp"/>
 
-            <div class="breadcrumbs">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <p class="bread"><span><a href="index.html">Home</a></span> / <span>Register</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
             <div id="colorlib-contact">
                 <div class="container">
-
                     <div class="row">
-                        <div class="offset-3 col-md-6">
+                        <div class="col-sm-12">
+                            <h3>Contact Information</h3>
+                            <div class="row contact-info-wrap">
+                                <div class="col-md-3">
+                                    <p><span><i class="icon-location"></i></span> Cosmo Mansion Soi 45 , <br>Pracha Uthit Road  Bangmod District Bangkok 10140</br></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p><span><i class="icon-phone3"></i></span> <a href="tel://0806354935">080-635-4935</a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p><span><i class="icon-paperplane"></i></span> <a href="RoyalStreetShoes@gmail.com">RoyalStreetShoes@gmail.com</a></p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p><span><i class="icon-globe"></i></span> <a href="#">RoyalStreetShoes.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
                             <div class="contact-wrap">
-                                <h3>Register</h3>
-                                <form action="Register" class="contact-form" method="post">
+                                <h3>Get In Touch</h3>
+                                <form action="#" class="contact-form">
                                     <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label>Username</label>
-                                                <input type="text" name="username" class="form-control" placeholder="Your username">
-                                            </div>
-                                        </div>
-                                        <div class="w-100"></div>
-
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label>Password</label>
-                                                <input type="text" name="password" class="form-control" placeholder="Your password">
-                                            </div>
-                                        </div>
-                                        <div class="w-100"></div>
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>First Name</label>
-                                                <input type="text" id="fname" name="fname" class="form-control" placeholder="Your firstname">
+                                                <label for="fname">First Name</label>
+                                                <input type="text" id="fname" class="form-control" placeholder="Your firstname">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="lname">Last Name</label>
-                                                <input type="text" id="lname" name="lname" class="form-control" placeholder="Your lastname">
-                                            </div>
-                                        </div>
-                                        <div class="w-100"></div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="message">Address</label>
-                                                <input type="text" name="address" class="form-control" placeholder="Your address">
+                                                <input type="text" id="lname" class="form-control" placeholder="Your lastname">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <label for="email">Email</label>
-                                                <input type="text" id="email" name="email" class="form-control" placeholder="Your email">
+                                                <input type="text" id="email" class="form-control" placeholder="Your email address">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label>Phone</label>
-                                                <input type="text" name="phone" class="form-control" placeholder="Your phone number">
+                                                <label for="subject">Subject</label>
+                                                <input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label>Credit card No</label>
-                                                <input type="text" name="creditcard" class="form-control" placeholder="Your credit card no">
+                                                <label for="message">Message</label>
+                                                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
                                             </div>
                                         </div>
                                         <div class="w-100"></div>
-                                        <span>${mes}</span>
-                                        <div class="offset-5">
+                                        <div class="col-sm-12">
                                             <div class="form-group">
-                                                <input type="submit" value="Confirm" class="btn btn-primary">
+                                                <input type="submit" value="Send Message" class="btn btn-primary">
                                             </div>
                                         </div>
                                     </div>
                                 </form>		
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div id="map" class="colorlib-map"></div>		
+                        </div>
                     </div>
                 </div>
             </div>
-
             <jsp:include page="include/Footer.jsp"/>
+
         </div>
+
+
 
         <div class="gototop js-top">
             <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>

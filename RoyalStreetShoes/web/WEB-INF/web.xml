@@ -68,6 +68,14 @@
         <servlet-name>RemoveQuantityServlet</servlet-name>
         <servlet-class>rss.servlet.RemoveQuantityServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ContactServlet</servlet-name>
+        <servlet-class>rss.servlet.ContactServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelpServlet</servlet-name>
+        <servlet-class>rss.servlet.HelpServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -135,6 +143,14 @@
     <servlet-mapping>
         <servlet-name>RemoveQuantityServlet</servlet-name>
         <url-pattern>/RemoveQuantity</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContactServlet</servlet-name>
+        <url-pattern>/Contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelpServlet</servlet-name>
+        <url-pattern>/Help</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

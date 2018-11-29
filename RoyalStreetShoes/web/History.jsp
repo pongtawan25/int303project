@@ -77,14 +77,14 @@
                                 <div class="one-eight text-center">
                                     <span>Price</span>
                                 </div>
-                                <div class="one-eight text-center">
+                                <div class="one-forth text-center">
                                     <span>Order date</span>
                                 </div>
                             </div>
                             <c:forEach items="${cus.historyList}" var="h">
                                 <div class="product-cart d-flex">
                                     <div class="one-forth">
-                                        <div class="product-img" style="background-image: url(images/${his.productid}.jpg);">
+                                        <div class="product-img" style="background-image: url(images/${h.productid.productid}.jpg);">
                                         </div>
                                         <div class="display-tc">
                                             <h3>${h.productname}</h3>
@@ -92,10 +92,10 @@
                                     </div>
                                     <div class="one-eight text-center">
                                         <div class="display-tc">
-                                            <span class="price">${h.producprice}</span>
+                                            <span class="price">${h.productprice}</span>
                                         </div>
                                     </div>
-                                    <div class="one-eight text-center">
+                                    <div class="one-forth text-center">
                                         <div class="display-tc">
                                             <span class="price">${h.time}</span>
                                         </div>

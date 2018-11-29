@@ -7,36 +7,17 @@ package rss.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.annotation.Resource;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.transaction.UserTransaction;
-import rss.jpa.model.Customer;
-import rss.jpa.model.History;
-import rss.jpa.model.Product;
-import rss.jpa.model.controller.HistoryJpaController;
-import rss.model.Cart;
-import rss.model.LineItem;
 
 /**
  *
  * @author Tan
  */
-public class OrdercompleteServlet extends HttpServlet {
-
-    @Resource
-    UserTransaction utx;
-    @PersistenceUnit(unitName = "RoyalStreetShoesPU")
-    EntityManagerFactory emf;
+public class ContactServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -49,25 +30,8 @@ public class OrdercompleteServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
-        Customer cus = (Customer) session.getAttribute("cus");
-        Cart cart = (Cart) session.getAttribute("cart");
-        if (cus != null) {
-            List<LineItem> line = cart.getLineItems();
-            HistoryJpaController hisCtrl = new HistoryJpaController(utx, emf);
-            int hisCount = hisCtrl.getHistoryCount();
-            for (LineItem l : line) {
-                History his = new History(hisCount, l.getProduct().getProductname(), l.getProduct().getProductprice(), new Date(), cus, l.getProduct());
-                try {
-                    hisCtrl.create(his);
-                } catch (Exception ex) {
-                    Logger.getLogger(OrdercompleteServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            session.removeAttribute("cart");
-            getServletContext().getRequestDispatcher("/Ordercomplete.jsp").forward(request, response);
-        }
-        getServletContext().getRequestDispatcher("/Login1").forward(request, response);
+       
+        getServletContext().getRequestDispatcher("/Contact.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

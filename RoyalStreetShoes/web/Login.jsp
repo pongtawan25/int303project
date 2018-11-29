@@ -81,7 +81,7 @@
                         <div class="offset-3 col-md-6">
                             <div class="contact-wrap">
                                 <h3>Login</h3>
-                                <form action="Login1" class="contact-form">
+                                <form action="Login1" class="contact-form" method="post">
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="username">Username</label>

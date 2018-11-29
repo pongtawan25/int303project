@@ -61,7 +61,7 @@ public class HistoryServlet extends HttpServlet {
                 }
             }
             cus.setHistoryList(hisList);
-            request.setAttribute("cus", cus);
+            session.setAttribute("cus", cus);
             getServletContext().getRequestDispatcher("/History.jsp").forward(request, response);
         }
         getServletContext().getRequestDispatcher("/Login1").forward(request, response);

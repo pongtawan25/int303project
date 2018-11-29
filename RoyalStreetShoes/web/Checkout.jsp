@@ -147,26 +147,19 @@
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <a class="btn btn-dark" href="Checkout?send=eco">Economy</a>
-                                                <p>6 - 7 Day</p>
+                                                <h5>6 - 7 Day 100 Baht</h5>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <a class="btn btn-dark" href="Checkout?send=ems">Ems</a>
-                                                <p>3 - 4 Day</p>
+                                                <h5>3 - 4 Day 150 Baht</h5>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <a class="btn btn-dark" href="Checkout?send=kerry">Kerry</a>
-                                                <p>1 - 2 Day</p>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value=""> I have read and accept the terms and conditions</label>
-                                                </div>
+                                                <h5>1 - 2 Day 200 Baht</h5>
                                             </div>
                                         </div>
                                     </div>
