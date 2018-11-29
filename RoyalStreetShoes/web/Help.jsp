@@ -67,36 +67,115 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h1>Help for use website</h1>
-
                         </div>
                     </div>
-
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="contact-wrap">
-                                <h3>Introduction usage for the Royal Street Shoes website.</h3>
-                                <hr>
-                                <form action="#" class="contact-form">
-                                    <div class="row">
-
-                                        <ul type="disc" >
-
-                                            <li st>เมื่อเราเข้าเว็บไซต์ RoyalStreetShoes แล้ว ในหน้าแรกจะมี แถบ menu bar ด้านบนต่างๆ</li> 
-                                            <li>All : คือสินค้าทั้งหมดของเว็บไซต์</li> 
-                                            <li>Nike , Adidas , Vans , Converse จะเป็นสินค้าที่แยกออกกมาตามแต่ละแบรนด์</li> 
-                                            <li>ถัดไป Contact จะเป็น วิธีติดต่อกับทางเว็บไซต์ ถ้าหากเราสงสัย หรือ มีข้อมูลที่อยากสอบถาม ก็สามารถสอบถามได้ โดย กรอก ชื่อ , นามสกุล , Email และ ข้อมูลที่เราสงสัย หรือ ข้อมูลที่อยากจะสอบถาม 
-                                                เมื่อกรอกเสร็จจะมีปุ่มกดส่งข้อมูล ทางเว็บไซต์(admin) จะตอบข้อมูล ปัญหาที่เราสงสัย หรือ สิ่งที่เราสอบถามไป กลับมาทาง Email  ของ ผู้ใช้ ภายหลัง</li>
-                                            <li>ถัดมาจะเป็น Login ถ้าหากเราต้องการที่จะเป็นสมาชิก ก็ให้กดเข้าไปสมัครใน login จะมีปุ่ม register อยู่ เมื่อสมัครเสร็จและจะกลับมาเป็นหน้า Login</li>
-                                            <li>หากเราทำการเลือกสินค้า แล้ว สินค้าที่เราเลือกจะถูกเพิ่มเข้าไปอยู่ใน Cart </li>
-                                            <li>เมื่อเราเลือกสินค้า เสร็จแล้ว ให้กด ไปที่ แถบ menu bar ชื่อว่า cart สินค้าที่เราเลือกจะสามารถ เพิ่มจำนวน หรือ ลดจำนวน </li>
-                                            <li>หากเราต้องการจะสั่งซื้อสินค้า แต่ว่า เรายังไม่ได้ Login ทาง เว็บไซต์ จะบังคับให้ ไป Login ก่อน และถ้าหากยังไม่ได้เป็นสมาชิกก็จะให้ไป สมัครก่อนที่ Register สมัครเสร็จก็กลับมา Login อีกครั้ง จะสามารถ ซื้อสินค้าได้ เมื่อกดปุ่ม Confirm เป็นการยืนยันว่าจะซื้อสินค้า จะเปลี่ยนไปที่หน้า Check out เราควรเช็ครายการสินค้าว่าถูกต้องหรือไม่ และจะไปที่หน้า Complete ให้เราทำการเลือก ประเภท การส่งมี 3 แบบ 1. แบบธรรมดา 2. Ems 3. Kerry เมื่อเรายืนยันการสั่งซื้อ จะไปที่หน้า Checkout ว่าทำการสั่งซื้อเรียบร้อยเป็นอันเสร็จสมบูรณ์  
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </form>		
+                    <div class="row row-pb-lg">
+                        <div class="col-md-8">
+                            <div class="product-name d-flex">
+                                <div class=" text-left px-4">
+                                    <span>Q : ทางเว็บไซต์มีช่องทางการชำระเงินแบบไหนบ้างครับ?</span>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="col-md-4"></div>
+                        <div class="offset-4 col-md-8">
+                            <div class="d-flex">
+                                <div class="one-forth text-left px-4">
+                                    <span>A : ทางเว็บไซต์ มีช่องทางการชำระเงิน โดยใช้บัตรเครดิต โดยที่เราต้องสมัครสมาชิกก่อนครับ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="product-name d-flex">
+                                <div class=" text-left px-4">
+                                    <span>Q : ถ้าสินค้าทางเว็บไซต์หมดต้องทำอย่างไรครับ?</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4"></div>
+                        <div class="offset-4 col-md-8">
+                            <div class="d-flex">
+                                <div class="one-forth text-left px-4">
+                                    <span>A : ไม่หมดแน่นอนครับ เพราะทางเว็บไซต์จะนำสินค้าเข้าทุกๆ 1 อาทิตย์</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="product-name d-flex">
+                                <div class=" text-left px-4">
+                                    <span>Q : ทางเว็บไซ์นี้ขายสินค้าของแท้หรือเปล่าครับ?</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4"></div>
+                        <div class="offset-4 col-md-8">
+                            <div class="d-flex">
+                                <div class="one-forth text-left px-4">
+                                    <span>A : แท้แน่นอนครับ เพราะว่า แต่ละแบรนด์ เป็น partner ของทางเว็บไซต์เองครับ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="product-name d-flex">
+                                <div class=" text-left px-4">
+                                    <span>Q : ระยะเวลาที่สินค้าทำการจัดส่งนานแค่ไหนคะ?</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4"></div>
+                        <div class="offset-4 col-md-8">
+                            <div class="d-flex">
+                                <div class="one-forth text-left px-4">
+                                    <span><p>A : แล้วแต่ประเภทการส่งสินค้าครับ จะมีทั้งหมด 3 แบบ
+                                         1.Economy จะได้รับสินค้า 6-7 วัน
+                                         2.Ems จะได้รับสินค้า 3-4 วัน
+                                         3.Kerry จะได้รับสินค้า 1-2 วัน</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="product-name d-flex">
+                                <div class=" text-left px-4">
+                                    <span>Q : ทางเว็บไซต์มีการพรีออเดอร์ไหมครับ?</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4"></div>
+                        <div class="offset-4 col-md-8">
+                            <div class="d-flex">
+                                <div class="one-forth text-left px-4">
+                                    <span>A : ไม่มีครับ ทางเว็บไซต์ จะ แสดงแค่สินค้าที่อยู่เท่านั้นครับ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="product-name d-flex">
+                                <div class=" text-left px-4">
+                                    <span>Q : ถ้าการส่งสินค้าผิดพลาด จะสามารถติดต่อได้ทางไหนบ้าครับ?</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4"></div>
+                        <div class="offset-4 col-md-8">
+                            <div class="d-flex">
+                                <div class="one-forth text-left px-4">
+                                    <span>A : ติดต่อได้จาก Contact โดยข้างในมีช่องทางการติดต่อกับทางเว็บไซต์ได้หลาบรูปแบบ</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

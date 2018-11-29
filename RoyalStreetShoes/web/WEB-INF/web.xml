@@ -76,6 +76,10 @@
         <servlet-name>HelpServlet</servlet-name>
         <servlet-class>rss.servlet.HelpServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>rss.servlet.SearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -151,6 +155,10 @@
     <servlet-mapping>
         <servlet-name>HelpServlet</servlet-name>
         <url-pattern>/Help</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/Search</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

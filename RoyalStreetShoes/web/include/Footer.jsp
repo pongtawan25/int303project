@@ -22,16 +22,18 @@
                 </ul>
                 </p>
             </div>
-            <div class="col footer-col colorlib-widget">
-                <h4>Customer Care</h4>
-                <p>
+            
+            <div class="col footer-col">
+                <h4>News</h4>
                 <ul class="colorlib-footer-links">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Help</a></li>
+                    <li><a target ="_blank" href="https://www.nike.com/th/th">Nike</a></li>
+                    <li><a target ="_blank" href=" https://www.adidas.co.th/th" </a>Adidas</a></li>
+                    <li><a target ="_blank" href="https://www.converse.com/us/en_us/c/converse">Converse</a></li>
+                    <li><a target ="_blank" href="https://www.vans.com/">Vans</a></li>
                     
                 </ul>
-                </p>
             </div>
+            
             <div class="col footer-col colorlib-widget">
                 <h4>Information</h4>
                 <p>
@@ -46,23 +48,12 @@
             </div>
 
             <div class="col footer-col">
-                <h4>News</h4>
-                <ul class="colorlib-footer-links">
-                    <li><a target ="_blank" href="https://www.nike.com/th/th">Nike</a></li>
-                    <li><a target ="_blank" href=" https://www.adidas.co.th/th" </a>Adidas</a></li>
-                    <li><a target ="_blank" href="https://www.converse.com/us/en_us/c/converse">Converse</a></li>
-                    <li><a target ="_blank" href="https://www.vans.com/">Vans</a></li>
-                    
-                </ul>
-            </div>
-
-            <div class="col footer-col">
                 <h4>Contact Information</h4>
                 <ul class="colorlib-footer-links">
-                    <li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
-                    <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-                    <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-                    <li><a href="#">yoursite.com</a></li>
+                    <li>Cosmo Mansion Soi 45 , <br>Pracha Uthit Road  Bangmod District Bangkok 10140</li>
+                    <li><a href="tel://0806354935">Tel : 080-635-4935</a></li>
+                    <li><a href="RoyalStreetShoes@gmail.com">RoyalStreetShoes@gmail.com</a></li>
+                    <li><a href="Index">www.RoyalStreetShoes.com</a></li>
                 </ul>
             </div>
         </div>

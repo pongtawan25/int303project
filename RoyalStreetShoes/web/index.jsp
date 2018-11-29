@@ -124,7 +124,7 @@
                                     </a>
                                     <div class="desc">
                                         <h2><a href="#">${b.bestname}</a></h2>
-                                        <span class="price">${b.bestprice} Baht</span>
+                                        <span class="price">${b.bestprice} THB</span>
                                     </div>
                                     <div class="form-group">
                                         <a class="btn btn-outline-dark" href="Addtocart?productid=${b.bestsellid}&&url=Index">Add to cart</a>

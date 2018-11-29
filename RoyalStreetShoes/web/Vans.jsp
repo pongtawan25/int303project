@@ -66,7 +66,7 @@
                                     </a>
                                     <div class="desc">
                                         <h2><a href="#">${p.productname}</a></h2>
-                                        <span class="price">${p.productprice} Baht</span>
+                                        <span class="price">${p.productprice} THB</span>
                                     </div>
                                     <div class="form-group">
                                         <a class="btn btn-outline-dark" href="Addtocart?productid=${p.productid}&&url=Vans">Add to cart</a>

@@ -168,7 +168,7 @@
                                                 <p><span>Quantity:</span> <span>${cart.totalQuantity}</span></p>     
                                             </div>
                                             <div class="grand-total">
-                                                <p><span><strong>Total:</strong></span> <span>${cart.totalPrice}</span></p>
+                                                <p><span><strong>Total:</strong></span> <span>${cart.totalPrice} THB</span></p>
                                             </div>
                                         </div>
                                     </div>

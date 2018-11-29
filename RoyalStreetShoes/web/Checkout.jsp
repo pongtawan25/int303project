@@ -115,7 +115,6 @@
                                         <p>${cus.customerphone}</p>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
 
@@ -130,11 +129,12 @@
                                                     <c:forEach items="${cart.lineItems}" var="l">
                                                         <li><span>${l.quantity} x ${l.product.productname}</span> <span>${l.totalPrice}</span></li>
                                                         </c:forEach>
-                                                    <span>SubTotal</span> <span>${cart.totalPrice}</span>
+
                                                 </ul>
                                             </li>
+                                            <li><span>SubTotal </span><span>${cart.totalPrice}</span></li>
                                             <li><span>Shipping</span> <span>${cart.shipPrice}</span></li>
-                                            <li><span>Order Total</span> <span>${cart.totalShipPrice}</span></li>
+                                            <li><span>Order Total</span> <span>${cart.totalShipPrice} THB</span></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -147,19 +147,19 @@
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <a class="btn btn-dark" href="Checkout?send=eco">Economy</a>
-                                                <h5>6 - 7 Day 100 Baht</h5>
+                                                <h5>6 - 7 Day 100 THB</h5>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <a class="btn btn-dark" href="Checkout?send=ems">Ems</a>
-                                                <h5>3 - 4 Day 150 Baht</h5>
+                                                <h5>3 - 4 Day 150 THB</h5>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <a class="btn btn-dark" href="Checkout?send=kerry">Kerry</a>
-                                                <h5>1 - 2 Day 200 Baht</h5>
+                                                <h5>1 - 2 Day 200 THB</h5>
                                             </div>
                                         </div>
                                     </div>
