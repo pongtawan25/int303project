@@ -38,6 +38,7 @@ public class SearchServlet extends HttpServlet {
             session.setAttribute("pd", pd);
             getServletContext().getRequestDispatcher("/All.jsp").forward(request, response);
         }
+        getServletContext().getRequestDispatcher("/All").forward(request, response);
 
     }
 
